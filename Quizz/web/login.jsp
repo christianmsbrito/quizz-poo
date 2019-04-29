@@ -1,6 +1,6 @@
 <%-- 
-    Document   : home
-    Created on : 28/04/2019, 18:01:40
+    Document   : login
+    Created on : 28/04/2019, 18:16:55
     Author     : Christian
 --%>
 
@@ -12,6 +12,10 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <form method="POST">
+            <label for="name"></label>
+            <input type="text" id="name" name="name" placeholder="Name">
+            <input type="submit" value="enter">
+        </form>
     </body>
 </html>

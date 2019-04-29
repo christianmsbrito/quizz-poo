@@ -1,4 +1,8 @@
+package classes;
 
+
+import classes.Question;
+import classes.User;
 import java.util.ArrayList;
 
 /*
@@ -13,7 +17,7 @@ import java.util.ArrayList;
  */
 public class Database {
     
-    private static ArrayList<User> users;
+    private static ArrayList<User> users = new ArrayList<>();
     private static ArrayList<Question> questions;
 
     public static ArrayList<Question> getQuizMatematica(){
@@ -33,5 +37,14 @@ public class Database {
     
     public static void insertUser(User user) {
         users.add(user);
+    }
+    
+    public static User getUserByName(String name) {
+        User finded = users.stream()
+            .filter(user -> user.getName().equals(name))
+            .findFirst()
+            .orElse(null);
+        
+        return finded;
     }
 }

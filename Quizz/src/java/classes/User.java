@@ -1,3 +1,5 @@
+package classes;
+
 
 import interfaces.Persistable;
 
@@ -11,7 +13,7 @@ import interfaces.Persistable;
  *
  * @author Christian
  */
-public class User implements Persistable{
+public class User implements Persistable {
     private final String name;
     private String sessionId;
     
